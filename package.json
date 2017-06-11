@@ -1,0 +1,9 @@
+{
+  "name": "api-blueprint",
+  "version": "1.0.0",
+  "description": "A blueprint for node APIs",
+  "main": "index.js",
+  "repository": "https://github.com/dak0rn/api-blueprint",
+  "author": "Daniel Koch <daniel@suitsoft.eu>",
+  "license": "MIT"
+}
