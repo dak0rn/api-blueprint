@@ -1,0 +1,9 @@
+const fn = function(req, res) {
+    res.json({
+        value: true
+    });
+};
+
+module.exports = function(server) {
+    server.get('/{{name}}', fn);
+};
