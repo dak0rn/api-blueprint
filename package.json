@@ -21,7 +21,8 @@
     "prettier": "^1.4.4"
   },
   "scripts": {
-    "start": "better-npm-run start"
+    "start": "better-npm-run start",
+    "lint": "eslint src"
   },
   "betterScripts": {
     "start": {
