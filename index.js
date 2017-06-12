@@ -33,8 +33,11 @@ findRoutes()
         return findMiddlewares();
     })
     .then(middlewares => {
-        requireAndIntegrate(middlewares);
+        requireAndIntegrate(middlewares, server);
     })
     .then(function() {
         server.listen(3000);
+    })
+    .catch(reason => {
+        console.error('Failed to start the server', reason);
     });
