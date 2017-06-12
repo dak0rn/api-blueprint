@@ -27,13 +27,13 @@ const requireAndIntegrate = function(files, app) {
 };
 
 /* Start ✨ */
-findRoutes()
-    .then(routes => {
-        requireAndIntegrate(routes, server);
-        return findMiddlewares();
-    })
+findMiddlewares()
     .then(middlewares => {
         requireAndIntegrate(middlewares, server);
+        return findRoutes();
+    })
+    .then(routes => {
+        requireAndIntegrate(routes, server);
     })
     .then(function() {
         server.listen(3000);
