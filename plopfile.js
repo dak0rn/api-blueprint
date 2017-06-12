@@ -47,5 +47,25 @@ module.exports = plop => {
                 }
             ]
         }
+    });
+
+    plop.setGenerator('Route', {
+        description: 'Create a new route',
+        prompts: [
+            {
+                message: 'Name for the route',
+                type: 'input',
+                name: 'name'
+            }
+        ],
+        actions() {
+            return [
+                {
+                    type: 'add',
+                    path: './src/routes/{{name}}.js',
+                    templateFile: './_templates/route.js.hbs'
+                }
+            ]
+        }
     })
 }
