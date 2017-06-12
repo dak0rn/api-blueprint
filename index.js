@@ -3,6 +3,8 @@
  *
  * Collects all routes and starts the server
  */
+require('./evilGlobalVariables');
+
 const glob = require('glob-promise');
 const express = require('express');
 const { partial } = require('lodash');
