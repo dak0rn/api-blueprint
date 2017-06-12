@@ -26,14 +26,18 @@ const requireAndIntegrate = function(files, app) {
     });
 };
 
+const filterJsAndSort = function(files) {
+    return files.filter(file => file.endsWith('.js')).sort();
+};
+
 /* Start ✨ */
 findMiddlewares()
     .then(middlewares => {
-        requireAndIntegrate(middlewares, server);
+        requireAndIntegrate(filterJsAndSort(middlewares), server);
         return findRoutes();
     })
     .then(routes => {
-        requireAndIntegrate(routes, server);
+        requireAndIntegrate(filterJsAndSort(routes), server);
     })
     .then(function() {
         server.listen(3000);
