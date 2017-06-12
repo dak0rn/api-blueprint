@@ -14,8 +14,8 @@ const server = express();
 server.use(bodyParser.json());
 
 /* Building blocks */
-const findRoutes = partial(glob, './routes/**/*.js');
-const findMiddlewares = partial(glob, './middlewares/**/*.js');
+const findRoutes = partial(glob, './src/routes/**/*.js');
+const findMiddlewares = partial(glob, './src/middlewares/**/*.js');
 const requireAndIntegrate = function(files, app) {
     files.forEach(file => {
         const fn = require(file);

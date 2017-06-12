@@ -1,7 +1,7 @@
 /**
  * Root route
  */
-const pkg = require('../package.json');
+const pkg = require('../../package.json');
 
 const getRoot = function(req, res) {
     res.json({
