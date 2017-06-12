@@ -22,7 +22,8 @@
   },
   "scripts": {
     "start": "better-npm-run start",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "prettier": "prettier --single-quote --tab-width 4 --write src/**/*.js"
   },
   "betterScripts": {
     "start": {
